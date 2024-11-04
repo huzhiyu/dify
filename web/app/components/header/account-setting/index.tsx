@@ -15,7 +15,6 @@ import {
   RiMoneyDollarCircleLine,
   RiPuzzle2Fill,
   RiPuzzle2Line,
-  RiTranslate2,
 } from '@remixicon/react'
 import MembersPage from './members-page'
 import LanguagePage from './language-page'
@@ -115,7 +114,7 @@ export default function AccountSetting({
       name: t('common.settings.workplaceGroup'),
       items: workplaceGroupItems,
     },
-    {
+    /* {
       key: 'account-group',
       name: t('common.settings.accountGroup'),
       items: [
@@ -126,7 +125,7 @@ export default function AccountSetting({
           activeIcon: <RiTranslate2 className={iconClassName} />,
         },
       ],
-    },
+    }, */
   ]
   const scrollRef = useRef<HTMLDivElement>(null)
   const [scrolled, setScrolled] = useState(false)
@@ -142,7 +141,8 @@ export default function AccountSetting({
     }
   }, [])
 
-  const activeItem = [...menuItems[0].items, ...menuItems[1].items].find(item => item.key === activeMenu)
+  // const activeItem = [...menuItems[0].items, ...menuItems[1].items].find(item => item.key === activeMenu)
+  const activeItem = [...menuItems[0].items].find(item => item.key === activeMenu)
 
   return (
     <Modal

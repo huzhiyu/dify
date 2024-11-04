@@ -1,6 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import Link from 'next/link'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { RiDoorLockLine } from '@remixicon/react'
 import Loading from '../components/base/loading'
@@ -13,7 +12,6 @@ import { getSystemFeatures, invitationCheck } from '@/service/common'
 import { defaultSystemFeatures } from '@/types/feature'
 import Toast from '@/app/components/base/toast'
 import useRefreshToken from '@/hooks/use-refresh-token'
-import { IS_CE_EDITION } from '@/config'
 
 const NormalForm = () => {
   const { getNewAccessToken } = useRefreshToken()
@@ -145,7 +143,7 @@ const NormalForm = () => {
               </div>
             </div>
           </>}
-          <div className="w-full block mt-2 system-xs-regular text-text-tertiary">
+          {/* <div className="w-full block mt-2 system-xs-regular text-text-tertiary">
             {t('login.tosDesc')}
             &nbsp;
             <Link
@@ -167,7 +165,7 @@ const NormalForm = () => {
               className='system-xs-medium text-text-secondary hover:underline'
               href='/install'
             >{t('login.setAdminAccount')}</Link>
-          </div>}
+          </div>} */}
 
         </div>
       </div>
