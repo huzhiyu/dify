@@ -19,7 +19,7 @@ const LogoSite: FC<LogoSiteProps> = ({
   const src = theme === 'light' ? '/logo/logo-site.png' : `/logo/logo-site-${theme}.png`
   return (
     <img
-      src={src}
+      src='/logo/logo-site.png'
       className={classNames('block w-auto h-10', className)}
       alt='logo'
     />

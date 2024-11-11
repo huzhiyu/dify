@@ -69,7 +69,7 @@ const Chatbot = () => {
       <Header
         isMobile={isMobile}
         title={site?.title || ''}
-        customerIcon={isDify() ? difyIcon : ''}
+        customerIcon={isDify() ? '' : ''}
         theme={themeBuilder?.theme}
         onCreateNewChat={handleNewConversation}
       />

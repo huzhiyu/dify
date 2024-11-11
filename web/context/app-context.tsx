@@ -128,12 +128,11 @@ export const AppContextProvider: FC<AppContextProviderProps> = ({ children }) =>
   const [theme, setTheme] = useState<Theme>(Theme.light)
   const handleSetTheme = useCallback((theme: Theme) => {
     setTheme(theme)
-    globalThis.document.documentElement.setAttribute('data-theme', theme)
+    globalThis.document.documentElement.setAttribute('data-theme', 'theme')
   }, [])
 
   useEffect(() => {
-    globalThis.document.documentElement.setAttribute('data-theme', theme)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    globalThis.document.documentElement.setAttribute('data-theme', 'light')
   }, [])
 
   if (!appList || !userProfile)
